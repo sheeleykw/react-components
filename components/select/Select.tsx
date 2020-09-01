@@ -79,7 +79,8 @@ const Select = React.forwardRef<HTMLSelectElement, Props>(
                           })
                         : buildOptions(options)}
                 </select>
-                <ErrorZone id={uid}>{hasError ? error : ''}</ErrorZone>
+
+                {hasError && <ErrorZone id={uid}>{error}</ErrorZone>}
             </>
         );
     }
